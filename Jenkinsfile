@@ -15,6 +15,13 @@ spec:
     command:
     - cat
     tty: true
+    resources:
+      requests:
+        memory: "256Mi"  # Request 256 megabytes of memory
+        cpu: "100m"      # Request 100 milliCPU (0.1 CPU core)
+      limits:
+        memory: "1024Mi"  # Limit memory usage to 512 megabytes
+        cpu: "400m"      # Limit CPU usage to 200 milliCPU (0.2 CPU core)
 """
 ) {
     node (label) {
